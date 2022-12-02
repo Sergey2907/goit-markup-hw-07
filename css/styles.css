@@ -432,10 +432,6 @@ body {
   justify-content: center;
 }
 
-.team__net-item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .net-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -443,7 +439,7 @@ body {
 .net-item {
   border-radius: 50%;
 
-  transition: background-color 1550ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .net-link {
@@ -458,7 +454,7 @@ body {
   border-radius: 50%;
   fill: var(--icon-color);
 
-  transition: fill 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .team__link:hover,
