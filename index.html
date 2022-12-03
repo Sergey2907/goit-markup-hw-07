@@ -425,35 +425,36 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p>Залиште свої дані, ми вам передзвонимо</p>
-        <form class="form-modal" autocomplete="on">
-          <label class="field-label"
+        <p class="modal__text">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form" autocomplete="on">
+          <label class="modal-form__label"
             >Ім'я
-            <input class="modal-input" type="text" name="name" autofocus />
-            <svg class="modal-icon">
+            <input class="modal-form__input" type="text" name="name" autofocus />
+            <svg class="modal-form__icon">
               <use href="./images/icons.svg/icons.svg#icon-person"></use>
             </svg>
           </label>
 
-          <label class="field-label"
+          <label class="modal-form__label"
             >Телефон
-            <input class="modal-input" type="tel" name="tel" />
-            <svg class="modal-icon">
+            <input class="modal-form__input" type="tel" name="tel" />
+            <svg class="modal-form__icon">
               <use href="./images/icons.svg/icons.svg#icon-phone"></use>
             </svg>
           </label>
 
-          <label class="field-label"
+          <label class="modal-form__label"
             >Пошта
-            <input class="modal-input" type="email" name="mail" />
-            <svg class="modal-icon">
+            <input class="modal-form__input" type="email" name="mail" />
+            <svg class="modal-form__icon">
               <use href="./images/icons.svg/icons.svg#icon-modal-mail"></use>
             </svg>
           </label>
 
-          <div class="texarea-label">
-            <label class="field-labe" for="comment">Коментар</label>
+          <div class="modal-form__texarea-label">
+            <label class="modal-form__labe" for="comment">Коментар</label>
             <textarea
+              class="modal-form__textarea"
               name="comment"
               id="comment"
               cols="30"
@@ -462,24 +463,25 @@
             ></textarea>
           </div>
 
-          <div class="wrapper-agree">
+          <div class="modal-form__wrapper-agree">
             <input
-              class="checkbox-agree visually-hidden"
+              class="modal-form__checkbox-agree visually-hidden"
               id="checkbox-agree"
               value="agree"
               name="checkbox-agree"
               type="checkbox"
             />
-            <label class="agree-label" for="checkbox-agree">
-              Погоджуюся з розсилкою та приймаю <a href=""> Умови договору</a>
+            <label class="modal-form__agree-label" for="checkbox-agree">
+              Погоджуюся з розсилкою та приймаю
+              <a href="" class="modal-form__link"> Умови договору</a>
             </label>
           </div>
 
-          <button class="modal-button btn" type="submit">Відправити</button>
+          <button class="modal-form__button btn" type="submit">Відправити</button>
         </form>
 
-        <button type="button" class="backdrop-close" data-modal-close>
-          <svg class="backdrop-icon">
+        <button type="button" class="modal__backdrop-close" data-modal-close>
+          <svg class="modal__backdrop-icon">
             <use href="./images/icons.svg/icons.svg#icon-vector-x"></use>
           </svg>
         </button>

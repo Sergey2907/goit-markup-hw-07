@@ -65,16 +65,6 @@ body {
 }
 
 /* Логотип */
-/* .site-nav__logo {
-  display: flex;
-  align-items: center;
-
-  font-family: 'Raleway';
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 1.19;
-  color: #000000;
-} */
 
 .site-nav__logo {
   display: flex;
@@ -768,7 +758,7 @@ body {
   transform: translate(-50%, -50%) scale(0.6);
 }
 
-.backdrop-close {
+.modal__backdrop-close {
   position: absolute;
 
   width: 30px;
@@ -784,21 +774,21 @@ body {
   cursor: pointer;
 }
 
-.wrapper-backdrop-close {
+/* .wrapper-backdrop-close {
   position: relative;
 
   width: 100%;
   height: 100%;
-}
+} */
 
-.backdrop-icon {
+.modal__backdrop-icon {
   width: 11px;
   height: 11px;
 
   fill: rgba(0, 0, 0, 1);
 }
 
-.backdrop-close:hover .backdrop-icon {
+.modal__backdrop-close:hover .modal__backdrop-icon {
   fill: currentColor;
 }
 
@@ -821,7 +811,7 @@ body {
   transition: transform 250ms var(--timing-function);
 }
 
-.modal p {
+.modal__text {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -835,7 +825,7 @@ body {
 
 /* поле для ввода */
 
-.modal-input {
+.modal-form__input {
   margin-top: 4px;
   width: 100%;
   height: 40px;
@@ -846,13 +836,13 @@ body {
   outline-color: var(--accent-color);
 }
 
-.modal-input:focus + .modal-icon {
+.modal-form__input:focus + .modal-form__icon {
   fill: var(--accent-color);
 }
 
 /* модал-іконки */
 
-.modal-icon {
+.modal-form__icon {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -862,7 +852,7 @@ body {
   fill: var(--primary-color);
 }
 
-.field-label {
+.modal-form__label {
   position: relative;
 
   display: flex;
@@ -877,7 +867,7 @@ body {
   color: #757575;
 }
 
-.texarea-label {
+.modal-form__texarea-label {
   font-size: 12px;
   line-height: 1.16;
 
@@ -886,7 +876,7 @@ body {
   color: #757575;
 }
 
-textarea {
+.modal-form__textarea {
   resize: none;
 
   width: 100%;
@@ -906,7 +896,7 @@ textarea::placeholder {
 
 /* згода на розсилку */
 
-.agree-label {
+.modal-form__agree-label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -920,7 +910,7 @@ textarea::placeholder {
   color: #757575;
 }
 
-.agree-label::before {
+.modal-form__agree-label::before {
   content: ' ';
   display: flex;
   width: 16px;
@@ -934,12 +924,12 @@ textarea::placeholder {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.agree-label a {
+.modal-form__link {
   color: var(--accent-color);
   margin-left: 5px;
 }
 
-.checkbox-agree:checked + .agree-label::before {
+.modal-form__checkbox-agree:checked + .modal-form__agree-label::before {
   background-color: #2196f3;
   border: none;
   background-image: url(../images/icons.svg/chek-mark.svg);
@@ -949,7 +939,7 @@ textarea::placeholder {
 
 /* кнопка */
 
-.modal-button {
+.modal-form__button {
   display: block;
   margin: 0 auto;
   width: 200px;
