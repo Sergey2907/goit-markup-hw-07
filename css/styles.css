@@ -774,13 +774,6 @@ body {
   cursor: pointer;
 }
 
-/* .wrapper-backdrop-close {
-  position: relative;
-
-  width: 100%;
-  height: 100%;
-} */
-
 .modal__backdrop-icon {
   width: 11px;
   height: 11px;
