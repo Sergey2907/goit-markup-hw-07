@@ -548,10 +548,6 @@ body {
 
 /* footer соц-мережі */
 
-.footer-icons {
-  margin-right: 93px;
-}
-
 .footer-icons__titel {
   font-size: 14px;
   line-height: 1.14;
@@ -946,7 +942,7 @@ textarea::placeholder {
 /* форма розсилки */
 /* форма-футер */
 .form-footer {
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 /* форма підписки */
