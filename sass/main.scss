@@ -14,16 +14,3 @@
 @import './layout/modal.scss';
 @import './layout/filter.scss';
 @import './layout/work.scss';
-
-// це для прикладу - чому так працює а з @importom  ні???
-
-$color: green;
-$color-text: red;
-
-body {
-  background-color: $color;
-}
-
-.hiro__titel {
-  color: $color-text;
-}

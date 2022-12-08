@@ -34,10 +34,10 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  transition: color 250ms var(--timing-function);
-}
+  transition: color 250ms $timing-function;
 
-.address__link:hover,
-.address__link:focus {
-  color: #ffffff;
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
 }

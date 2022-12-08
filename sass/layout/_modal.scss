@@ -9,16 +9,16 @@
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms $timing-function;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-}
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.6);
+  & .modal {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
 }
 
 .modal__backdrop-close {
@@ -29,12 +29,16 @@
   top: 8px;
   right: 8px;
 
-  color: var(--accent-color);
+  color: $accent-color;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
   cursor: pointer;
+
+  &:hover .modal__backdrop-icon {
+    fill: currentColor;
+  }
 }
 
 .modal__backdrop-icon {
@@ -42,10 +46,6 @@
   height: 11px;
 
   fill: rgba(0, 0, 0, 1);
-}
-
-.modal__backdrop-close:hover .modal__backdrop-icon {
-  fill: currentColor;
 }
 
 /* модалка */
@@ -64,7 +64,7 @@
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms $timing-function;
 }
 
 .modal__text {
@@ -76,7 +76,7 @@
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 /* поле для ввода */
@@ -89,11 +89,11 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline-color: var(--accent-color);
-}
+  outline-color: $accent-color;
 
-.modal-form__input:focus + .modal-form__icon {
-  fill: var(--accent-color);
+  &:focus + .modal-form__icon {
+    fill: $accent-color;
+  }
 }
 
 /* модал-іконки */
@@ -105,7 +105,7 @@
 
   width: 18px;
   height: 18px;
-  fill: var(--primary-color);
+  fill: $primary-color;
 }
 
 .modal-form__label {
@@ -143,7 +143,7 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  outline-color: var(--accent-color);
+  outline-color: $accent-color;
 }
 
 textarea::placeholder {
@@ -164,24 +164,24 @@ textarea::placeholder {
   letter-spacing: 0.03em;
 
   color: #757575;
-}
 
-.modal-form__agree-label::before {
-  content: ' ';
-  display: flex;
-  width: 16px;
-  height: 15px;
+  &::before {
+    content: ' ';
+    display: flex;
+    width: 16px;
+    height: 15px;
 
-  margin-right: 7px;
+    margin-right: 7px;
 
-  border: 2px solid var(--primary-color);
-  border-radius: 2px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 2px solid $primary-color;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .modal-form__link {
-  color: var(--accent-color);
+  color: $accent-color;
   margin-left: 5px;
 }
 

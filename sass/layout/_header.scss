@@ -20,7 +20,7 @@
 }
 
 .site-nav__text {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 /* навигация */
@@ -46,12 +46,27 @@
   line-height: 1.14;
   color: var(--primary-color);
 
-  transition: color 250ms var(--timing-function);
-}
+  transition: color 250ms $timing-function;
 
-.site-nav__link:hover,
-.site-nav__link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &.current::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+
+    border-radius: 2px;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -59,21 +74,6 @@
 }
 
 /* Підкреслення */
-
-.site-nav__link.current::after {
-  content: '';
-
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-
-  border-radius: 2px;
-}
 
 /* контакти хедер */
 
@@ -89,7 +89,7 @@
 }
 
 .current {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .site-contacts__link {
@@ -100,20 +100,20 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  color: var(--secondary-color);
+  color: $secondary-color;
 
-  transition: color 250ms var(--timing-function);
-}
+  transition: color 250ms $timing-function;
 
-.site-contacts__link:hover,
-.site-contacts__link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .site-contacts__icon {
   align-self: center;
   margin-right: 10px;
-  fill: var(--secondary-color);
+  fill: $secondary-color;
   stroke: currentColor;
 }
 

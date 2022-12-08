@@ -15,10 +15,10 @@
 .team__item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
-}
 
-.team__item:nth-child(4n) {
-  margin-right: 0;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 
 .team__img {
@@ -39,14 +39,14 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  color: var(--primary-color);
+  color: $primary-color;
 
   margin-bottom: 10px;
 }
 
 .team__description {
   line-height: 1.18;
-  color: var(--secondary-color);
+  color: $secondary-color;
   margin-bottom: 16px;
 }
 
@@ -58,14 +58,14 @@
   justify-content: center;
 }
 
-.net-item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .net-item {
   border-radius: 50%;
 
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms $timing-function;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .net-link {
@@ -78,13 +78,13 @@
   font-size: 0px;
   padding: 0;
   border-radius: 50%;
-  fill: var(--icon-color);
+  fill: $icon-color;
 
-  transition: background-color 250ms var(--timing-function);
-}
+  transition: background-color 250ms $timing-function;
 
-.team__link:hover,
-.team__link:focus {
-  fill: var(--main-fon-color);
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: $main-fon-color;
+    background-color: $accent-color;
+  }
 }
